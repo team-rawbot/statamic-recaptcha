@@ -1,0 +1,43 @@
+{
+  "name": "haugen86/statamic-recaptcha",
+  "type": "statamic-addon",
+  "description": "Add Google Recaptcha v3 to your forms.",
+  "keywords": [
+    "statamic",
+    "recaptcha",
+    "forms"
+  ],
+  "homepage": "https://github.com/haugen86/statamic-recaptcha",
+  "license": "MIT",
+  "require": {
+    "statamic/cms": "^3.0",
+    "google/recaptcha": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "haugen86\\Recaptcha\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Marius Haugen",
+      "email": "meh@webium.no",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "statamic": {
+      "name": "Recaptcha",
+      "slug": "recaptcha",
+      "description": "Add Google Recaptcha v3 to your forms.",
+      "version": "1.0.0"
+    },
+    "laravel": {
+      "providers": [
+        "haugen86\\Recaptcha\\RecaptchaServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
