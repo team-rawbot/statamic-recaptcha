@@ -75,6 +75,12 @@ class Recaptcha
         return config('recaptcha.score_threshold');
     }
 
+    public function getDefaultDisclaimer()
+    {
+        return __('recaptcha::recaptcha.disclaimer');
+    }
+
+
     public function renderHeadTag()
     {
         return view('recaptcha::head', [
@@ -84,6 +90,6 @@ class Recaptcha
 
     public function renderIndexTag()
     {
-        return "<input type=\"hidden\" name=\"recaptcha_response\" value=\"\"></input>";
+        return "<input type=\"hidden\" name=\"recaptcha_response\" value=\"\"></input> <div class='mt-4 text-xs'>$this->getDefaultDisclaimer()</div>";
     }
 }
