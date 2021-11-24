@@ -28,6 +28,15 @@ class RecaptchaTag extends Tags
         return $this->recaptcha->renderIndexTag();
     }
 
+    public function disclaimer()
+    {
+        if (! $disclaimer = config('recaptcha.disclaimer')) {
+            $disclaimer = $this->recaptcha->getDefaultDisclaimer();
+        }
+
+        return Html::markdown($disclaimer);
+    }
+
 
     /**
      * The {{ recaptcha:head }} tag

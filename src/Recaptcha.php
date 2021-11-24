@@ -92,6 +92,6 @@ class Recaptcha
 
     public function renderIndexTag()
     {
-        return "<input type=\"hidden\" name=\"recaptcha_response\" value=\"\"></input> <div class='mt-4 text-xs'>$this->getDefaultDisclaimer()</div>";
+        return "<input type=\"hidden\" name=\"recaptcha_response\" value=\"\"></input>";
     }
 }
