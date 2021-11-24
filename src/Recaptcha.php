@@ -26,7 +26,8 @@ class Recaptcha
         } else {
             $errors = $response->getErrorCodes();
         }
-       return $this;
+
+        return $this;
     }
 
     /**
@@ -56,7 +57,7 @@ class Recaptcha
     {
         if ($this->invalidResponse()) {
 
-            throw ValidationException::withMessages(['recaptcha' =>  __('recaptcha::recaptcha.validation_error')]);
+            throw ValidationException::withMessages(['recaptcha' => __('recaptcha::recaptcha.validation_error')]);
         }
     }
 
@@ -84,7 +85,8 @@ class Recaptcha
     public function renderHeadTag()
     {
         return view('recaptcha::head', [
-            'siteKey' => $this->getSiteKey()
+            'siteKey'    => $this->getSiteKey(),
+            'hide_badge' => config('recaptcha.score_threshold')
         ])->render();
     }
 
