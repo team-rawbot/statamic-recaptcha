@@ -10,7 +10,7 @@
   "homepage": "https://github.com/haugen86/statamic-recaptcha",
   "license": "MIT",
   "require": {
-    "statamic/cms": "^3.0",
+    "statamic/cms": "^4.0",
     "google/recaptcha": "^1.2"
   },
   "autoload": {
